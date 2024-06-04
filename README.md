@@ -15,11 +15,9 @@ Developed by [Ludovic DARMET](http://www.isc.cnrs.fr/index.rvt?language=en&membe
 
 ## Dependencies
 
-- [Psychopy<sup>3</sup>](https://www.psychopy.org/download.html)
-- [PyACQ](https://github.com/pyacq/pyacq/tree/master)
-- [pylsl](https://github.com/chkothe/pylsl)
-- [Sklearn](https://scikit-learn.org/stable/install.html)
-- Pickle
+- [socket](https://docs.python.org/3/library/socket.html)
+- [struct](https://docs.python.org/3/library/struct.html)
+- [threading](https://docs.python.org/3/library/threading.html)
 
 ## Installation
 👩‍💻
@@ -28,7 +26,6 @@ Clone the repo:
 ```bash
 git clone https://github.com/ludovicdmt/udp_cyb.git
 cd ${INSTALL_PATH}
-conda env create -f udp.yml
 pip install -e .
 ```
 This will install the module in editable mode. That means that any changes you do to the code will be updated so you don't have to re-install every time.

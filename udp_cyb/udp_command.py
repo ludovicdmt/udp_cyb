@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Interface to handle the UDP communication with the game.
+"""Interface to handle the UDP communications with the 2024 Cybathlon game.
 
 Author: Ludovic Darmet
 email: ludovic.darmet@gmail.com
