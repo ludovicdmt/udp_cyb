@@ -41,7 +41,7 @@ class UDPClient:
         # Is a mini-game started
         self.control = False
         # Which mini-game
-        self.device = "wheelchair"
+        self.device = "None"
 
     def send_message(self, message: bytes) -> None:
         """Send a message to the game.
@@ -223,8 +223,9 @@ class UDPClient:
             time.sleep(0.1)
             if data is not None:
                 try:
-                    startandstop = data[-10:-9]
-                    device = data[-9:-8]
+                    
+                    startandstop = data[-2:-1]
+                    device = data[-1:]
                     if startandstop == b'\x01':
                         self.control = True
                     elif  startandstop == b'\x02':
