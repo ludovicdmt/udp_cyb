@@ -11,7 +11,7 @@ __author__ = "Ludovic Darmet"
 import numpy as np
 import time
 
-from ..udp_cyb import UDPClient
+from udp_cyb import UDPClient
 
 # Run on localhost and default port.
 client = UDPClient(ip = "localhost", port = 59075)
