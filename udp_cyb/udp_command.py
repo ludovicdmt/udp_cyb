@@ -122,7 +122,7 @@ class UDPClient:
         self.send_message(message)
 
         # Stop the movement after a short period of time to move only from an increment
-        time.sleep(0.3)
+        time.sleep(0.13)
         binary_inputs = self.binary_inputs_to_payload(0, 0)
         continuous_inputs = self.analogue_inputs_to_payload(0, 0)
         # Format the message

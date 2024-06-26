@@ -16,7 +16,7 @@ from udp_cyb import UDPClient
 # Run on localhost and default port.
 client = UDPClient(ip = "localhost", port = 59075)
 client.start()
-time.sleep(2)
+
 while True:
     # Start only when control and device is sent by the game
     if client.control == True:
@@ -25,5 +25,7 @@ while True:
         while np.abs(analogue_input_1) > 1:
             analogue_input_1 = np.random.normal(0, 0.5)
         # Send command
+        tic = time.perf_counter()
         client.send_command(0, 0, analogue_input_1, 0.5)
+        print(f"Elapsed time: {time.perf_counter() - tic}")
         time.sleep(1)
